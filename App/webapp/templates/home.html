@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% include 'nav.html'%}
+{%block head%}
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+</style>
+{%endblock%}
+{%block body%}
+<h1>Welcome </h1>
+<h3><a href={{url_for('details' ,id=data.user.id)}} >{{data.user.firstname}} {{data.user.Lastname}}</a></h3>
+{%if data.user%}
+    {%if data.user.roll=='A'%}
+        <a href={{url_for('admin')}}>Admin Page</a>
+    {%endif%}
+
+{%endif%}
+{%endblock%}

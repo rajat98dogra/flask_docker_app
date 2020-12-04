@@ -1,0 +1,59 @@
+{
+    "db": [
+        {
+            "id": 1,
+            "firstname": "Rajat",
+            "lastname": "Dogra",
+            "email": "rajatadmin@g.com",
+            "phone": 123443211,
+            "address": "qawsedrfaaaaaaaa",
+            "dob": "2020-05-27",
+            "password": "pbkdf2:sha256:150000$eCxMcnTr$c53c3521b002c995cc4b35facd0aa50e74231c211a7df1990165d4288ba4154a",
+            "roll": "A"
+        },
+        {
+            "id": 2,
+            "firstname": "maax",
+            "lastname": "john",
+            "email": "max@g.com",
+            "phone": 12344322,
+            "address": "address",
+            "dob": "2000-06-20",
+            "password": "pbkdf2:sha256:150000$VGXuyQBr$048d017aefa3767ee76c98615737409ff0d547787481b34771d1f0005731f306",
+            "roll": "U"
+        },
+        {
+            "id": 3,
+            "firstname": "test",
+            "lastname": "test",
+            "email": "test@g.com",
+            "phone": 12321234,
+            "address": "ascxxz",
+            "dob": "2008-07-24",
+            "password": "pbkdf2:sha256:150000$uS55S84M$22588eb70e1c72e47dc9e43cdc0dbae5396a8b847f508266d6fe94a5e36f2ea7",
+            "roll": "A"
+        },
+        {
+            "id": 4,
+            "firstname": "hari",
+            "lastname": "kishan",
+            "email": "hari@g.com",
+            "phone": 54311234,
+            "address": "htstest home",
+            "dob": "1999-12-04",
+            "password": "pbkdf2:sha256:150000$yDrwTxjI$512b300015bcdf88ae990ff0fdf00007047111c063f5d089553a6094b69b8553",
+            "roll": "U"
+        },
+        {
+            "id": 5,
+            "firstname": "robot",
+            "lastname": "robot",
+            "email": "bot@g.com",
+            "phone": 222222222,
+            "address": "qawsedrfaaaaaaaa",
+            "dob": "2020-11-18",
+            "password": "pbkdf2:sha256:150000$GNrzCnrd$8c89a7e8d4335f5a47f0f77a0c2d7255594659eacdbd37dd8f4baaef9ff32fb4",
+            "roll": "U"
+        }
+    ]
+}
