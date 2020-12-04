@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+{% include 'nav.html'%}
+{%block body%}
+<h1>{{data.user[0].email}}</h1>
+    <table class="table">
+            <tr>
+                {%if data.current.id!=data.user[0].id%}
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Address</th>
+                {%else%}
+                    <th>Firstname</th>
+                    <th>Lastname</th>
+                    <th>Phone no.</th>
+                    <th>DOB</th>
+                    <th>Address</th>
+                {%endif%}
+            </tr>
+        {% for u in data.user %}
+            <tr>
+                {%if data.current.id!=u.id %}
+                    <td>{{u.firstname}}</td>
+                    <td>{{u.lastname}}</td>
+                    <td>{{u.address}}</td>
+                {%else%}
+                <td>{{u.firstname}}</td>
+                <td>{{u.lastname}}</td>
+                <td>{{u.phone}}</td>
+                <td>{{u.dob}}</td>
+                <td>{{u.address}}</td>
+                {%endif%}
+            </tr>
+        <div id="form">
+            <form action={{url_for('myUpdate' ,id=u.id)}} method="POST">
+                {{form.csrf_token}}
+                {%if data.current.roll=='A' and data.current.id!=u.id%}
+                <label>Firstname</label>
+                <input type="text" value="{{u.firstname}}"name='firstname' placeholder="Firstname"><br>
+                <label>Lastname</label>
+                <input type="text" value="{{u.lastname}}" name='lastname' placeholder="Lastname"><br>
+                <label>Roll</label>
+                <input type="text" name='roll' value="{{u.roll}}" placeholder="Roll"><br>
+                {%else%}
+                <label>Firstname</label>
+                <input type="text" value="{{u.firstname}}"name='firstname' placeholder="Firstname"><br>
+                <label>Lastname</label>
+                <input type="text" value="{{u.lastname}}" name='lastname' placeholder="Lastname"><br>
+                <label>Email</label>
+                <input type="email" value="{{u.email}}" name='email' placeholder="email"><br>
+                <label>Phone No.</label>
+                <input type="text" value="{{u.phone}}" name='phone' placeholder="phone number"><br>
+                <label>Address</label>
+                <input type="text" value="{{u.address}}" name='address' placeholder="Address"><br>
+                <label>DOB</label>
+                <input type="Date" value="{{u.dob}}" name='dob' placeholder="D-O-B"><br>
+
+                {%endif%}
+                <input class="btn btn-primary" type="submit" value="Update">
+            </form>
+        </div>
+        {%endfor%}
+    </table>
+{%endblock%}
